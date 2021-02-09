@@ -1,0 +1,74 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>EquestriaCN_Test</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>EquestriaCN_Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="EquestriaCN_Test.csproj" File="EquestriaCN_Test.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="AdjustableSize.cs">AdjustableSize.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem ReplaceParameters="false" TargetFileName="avator_what.jpg">avator_what.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="banner5.jpg">banner5.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="BlankImage.jpg">BlankImage.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="FB_IMG_1517224859195.jpg">FB_IMG_1517224859195.jpg</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="flatColor.png">flatColor.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="LockScreenLogo.scale-200.png">LockScreenLogo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-200.png">SplashScreen.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square150x150Logo.scale-200.png">Square150x150Logo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square44x44Logo.scale-200.png">Square44x44Logo.scale-200.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Square44x44Logo.targetsize-24_altform-unplated.png">Square44x44Logo.targetsize-24_altform-unplated.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.png">StoreLogo.png</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="TESTPRO.html">TESTPRO.html</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="THIS.png">THIS.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="Wide310x150Logo.scale-200.png">Wide310x150Logo.scale-200.png</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="ClassDiagram1.cd">ClassDiagram1.cd</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Data.cs">Data.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="EquestriaCN_Test_TemporaryKey.pfx">EquestriaCN_Test_TemporaryKey.pfx</ProjectItem>
+      <Folder Name="Local" TargetFolderName="Local" />
+      <ProjectItem ReplaceParameters="true" TargetFileName="LocalStorage.cs">LocalStorage.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+      <Folder Name="Model" TargetFolderName="Model">
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentsListView.xaml">CommentsListView.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="CommentsListView.xaml.cs">CommentsListView.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchListViewItem.xaml">SearchListViewItem.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchListViewItem.xaml.cs">SearchListViewItem.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchSection.xaml">SearchSection.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SearchSection.xaml.cs">SearchSection.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SingleCommentViewer.xaml">SingleCommentViewer.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SingleCommentViewer.xaml.cs">SingleCommentViewer.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SingleSearchResult.cs">SingleSearchResult.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Package.appxmanifest">Package.appxmanifest</ProjectItem>
+      <Folder Name="Pages" TargetFolderName="Pages">
+        <ProjectItem ReplaceParameters="true" TargetFileName="ICategory.cs">ICategory.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Index.xaml">Index.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Index.xaml.cs">Index.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PageDisplayer.xaml">PageDisplayer.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="PageDisplayer.xaml.cs">PageDisplayer.xaml.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SettingsPage.xaml">SettingsPage.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="SettingsPage.xaml.cs">SettingsPage.xaml.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PostDisplayer.xaml">PostDisplayer.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="PostDisplayer.xaml.cs">PostDisplayer.xaml.cs</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Default.rd.xml">Default.rd.xml</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Test.cs">Test.cs</ProjectItem>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

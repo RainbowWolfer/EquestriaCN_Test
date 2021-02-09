@@ -1,0 +1,72 @@
+﻿<Page
+    x:Class="EQCN.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:equestriacn_test="using:EQCN"
+	mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+	Loading="Page_Loading"
+	Loaded="Page_Loaded">
+	<Page.Resources>
+		<Style TargetType="Button" x:Key="AppBarCharacterButton">
+			<Setter Property="Height" Value="50"/>
+			<Setter Property="Width" Value="50"/>
+			<Setter Property="FontSize" Value="24"/>
+			<Setter Property="FontFamily" Value="Segoe MDL2 Assets"/>
+			<Setter Property="Background" Value="Transparent"/>
+			<Setter Property="Margin" Value="10,0,10,0"/>
+		</Style>
+	</Page.Resources>
+	<Grid Name="MainGrid" SizeChanged="MainGrid_SizeChanged">
+		<Pivot Name="MainPivot" Margin="0,5,0,0">
+			<Pivot.LeftHeader>
+				<StackPanel Orientation="Horizontal">
+					<Button Name="HamburgerButton" Height="50" Width="50" Click="HamburgerButton_Click" Visibility="Visible" BorderThickness="0" Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" FontSize="20"/>
+					<Button Name="BackButton" Height="50" Width="50" Click="BackButton_Click" BorderThickness="0" Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE0D5;" FontSize="20"/>
+				</StackPanel>
+			</Pivot.LeftHeader>
+			<Pivot.RightHeader>
+				<StackPanel Orientation="Horizontal" >
+					<Button Name="SearchButton" Height="50" Width="50" Click="SearchButton_Click" BorderThickness="0" Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE11A;" FontSize="20"/>
+					<Button Name="OptionsButton" Height="50" Width="50" BorderThickness="0" Background="Transparent" FontFamily="Segoe MDL2 Assets" Content="&#xE10C;" FontSize="20" >
+						<Button.Flyout>
+							<MenuFlyout Placement="Bottom">
+								<MenuFlyoutItem Name="SettingsFlyoutItem" Text="设置" Click="SettingsFlyoutItem_Click"/>
+								<MenuFlyoutItem Name="AboutFlyoutItem" Text="关于" Click="AboutFlyoutItem_Click"/>
+								<MenuFlyoutSeparator/>
+								<MenuFlyoutItem Name="OfficialFlyoutItem" Text="官网" Click="OfficialFlyoutItem_Click"/>
+							</MenuFlyout>
+						</Button.Flyout>
+					</Button>
+				</StackPanel>
+			</Pivot.RightHeader>
+		</Pivot>
+		<Grid Name="MyMask" Height="55" Margin="50,0,50,0" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+			<Rectangle Fill="Black" Height="55" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+			<TextBlock Text="当前位置：" FontSize="24" VerticalAlignment="Center" Margin="50,0,0,0"/>
+		</Grid>
+		<SplitView FlowDirection="LeftToRight" DisplayMode="Overlay" OpenPaneLength="250" Name="CategoriesSplitView" Margin="0,55,0,0">
+			<SplitView.Pane>
+				<StackPanel Orientation="Vertical"  Margin="0,0,0,0">
+					<ListView Name="CategoriesListView" SelectionMode="Single" IsItemClickEnabled="True" ItemClick="CategoriesListView_ItemClick"/>
+				</StackPanel>
+			</SplitView.Pane>
+		</SplitView>
+		<SplitView FlowDirection="RightToLeft" DisplayMode="Overlay" OpenPaneLength="500" Name="SettingsSpiltView">
+			<SplitView.Pane>
+				<StackPanel HorizontalAlignment="Stretch" Margin="5,5,5,5">
+					<TextBlock Text="EquestriaCN UWP" HorizontalAlignment="Right"/>
+					<TextBlock Name="VersionTextBlock" Text="0.0.0.0" HorizontalAlignment="Right"/>
+					<TextBlock Text="By RainbowWolfer" HorizontalAlignment="Right"/>
+				</StackPanel>
+			</SplitView.Pane>
+		</SplitView>
+		<!--<AppBar Name="MainAppBar" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal">
+			<StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+				<Button Name="SettingsBtn" Click="SettingsBtn_Click" Content="&#xE115;" Style="{StaticResource AppBarCharacterButton}"/>
+			</StackPanel>
+		</AppBar>-->
+	</Grid>
+</Page>

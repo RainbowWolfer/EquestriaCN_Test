@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="EQCN.PostDisplayer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EQCN"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:model="using:EQCN.Model"
+	mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<GridView SelectionMode="None" IsItemClickEnabled="False">
+		<StackPanel Orientation="Vertical" Name="MainStackPanel">
+			<!--<Button Name="BackButton" Click="BackButton_Click" Height="70" Margin=" 20,20,20,0" HorizontalAlignment="Stretch" Content="Go Back" FontSize="36"/>-->
+			<StackPanel Orientation="Horizontal" Margin="25,25,10,0">
+				<Rectangle Width="10" VerticalAlignment="Stretch" Fill="Red"/>
+				<TextBlock Text="{x:Bind post.Title.Rendered}" FontSize="40" Margin="5,0,20,0" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+			</StackPanel>
+			<Rectangle Fill="Gray" Opacity="0.7" HorizontalAlignment="Stretch" Height="5" Margin="20,20,30,0"/>
+			<Grid Margin="20,10,20,0">
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="*"/>
+				</Grid.RowDefinitions>
+				<TextBlock Name="LeftDetailTextBlock" Grid.Row="0" Text="{x:Bind subTitle}" FontSize="24" HorizontalAlignment="Left"/>
+				<TextBlock Name="RightDetailTextBlock" Grid.Row="1" Text="{x:Bind categoies}" FontSize="24" HorizontalAlignment="Right" Margin="0,0,30,0"/>
+			</Grid>
+			<Rectangle Fill="Gray" Opacity="0.7" HorizontalAlignment="Stretch" Height="5" Margin="20,10,30,0"/>
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="auto"/>
+				</Grid.ColumnDefinitions>
+
+				<ScrollViewer Name="MainScrollviewer" VerticalScrollMode="Enabled" VerticalScrollBarVisibility="Visible" Grid.ColumnSpan="1" Grid.Column="0">
+					<StackPanel Orientation="Vertical">
+
+						<GridView SelectionMode="None" IsItemClickEnabled="False">
+							<StackPanel Name="ContentStackPanel" Margin="20,5,20,5" Orientation="Vertical"/>
+						</GridView>
+						<!--<WebView Name="MainWebView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="30,30,30,30"/>-->
+						<Rectangle Fill="Gray" Opacity="0.7" HorizontalAlignment="Stretch" Height="5" Margin="20,20,30,0"/>
+						<StackPanel Margin="20,10,0,0" Orientation="Vertical">
+							<TextBlock Text="关于作者：" FontSize="24" HorizontalAlignment="Left"/>
+							<StackPanel Orientation="Horizontal">
+								<Grid>
+									<Image Name="AvatorImage" Height="100" Width="100" HorizontalAlignment="Left" Margin="5,5,5,5"/>
+									<ProgressRing Name="AvatorLoadingRing" Height="100" Width="100" IsActive="True"/>
+								</Grid>
+								<TextBlock FontSize="36" Text="{x:Bind post.author_User.Name}" VerticalAlignment="Bottom" Margin="10,10,10,10"/>
+								<TextBlock FontSize="16" Text="{x:Bind post.author_User.Description}" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="-10,10,10,10" TextWrapping="WrapWholeWords"/>
+							</StackPanel>
+						</StackPanel>
+						<Rectangle Fill="Gray" Opacity="0.7" HorizontalAlignment="Stretch" Height="5" Margin="20,10,30,0"/>
+						<Grid Name="CommentViewerHolder"/>
+					</StackPanel>
+				</ScrollViewer>
+				<Grid Name="SideCommentViewerHolder" Grid.Column="1" Grid.ColumnSpan="1" Width="500"/>
+			</Grid>
+		</StackPanel>
+	</GridView>
+</Page>

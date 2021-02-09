@@ -1,0 +1,32 @@
+﻿<UserControl
+    x:Class="EQCN.Model.SingleCommentViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EQCN.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="80"
+    d:DesignWidth="500"
+	Loading="UserControl_Loading">
+
+	<StackPanel>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="40"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="80"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Image Name="AvatorImage" Height="80" Width="80" Grid.RowSpan="2"/>
+			<TextBlock Name="AuthorNameTextBlock" FontSize="24" Grid.Row="0" Grid.Column="1" Margin="10,0,5,0"/>
+			<TextBlock Name="DetailTextBlock" FontSize="20" Grid.Row="1" Grid.Column="1" Margin="10,0,5,0"/>
+		</Grid>
+		<StackPanel Name="ContentHolderStackPanel" Margin="0,5,20,20"/>
+		<!--<TextBlock Name="ContentTextBlock" FontSize="22" TextWrapping="WrapWholeWords"/>-->
+
+		<!--<Button/>-->
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,84 @@
+﻿<Page
+    x:Class="EQCN.Pages.SettingsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:EQCN.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<GridView HorizontalAlignment="Stretch" Name="MainGridView" SizeChanged="MainGridView_SizeChanged" IsItemClickEnabled="False" SelectionMode="None">
+		<!--就是为了有个缓动效果-->
+		<StackPanel Margin="30,10,30,10">
+			<TextBlock Text="设置（开发中）" FontSize="68"/>
+			<Rectangle Loaded="Rectangle_Loaded" Height="5" Margin="10,20,10,10" Fill="LightSlateGray"/>
+			<TextBlock Text="主题设置" FontSize="48" Margin="10,0,0,5"/>
+			<TextBlock Text="主题模式" FontSize="24" Margin="20,5,0,5"/>
+			<StackPanel Orientation="Vertical" Margin="30,0,0,5">
+				<RadioButton Name="myLightThemeButton" Click="myLightThemeButton_Click" Content="明亮"/>
+				<RadioButton Name="myDarkThemebutton" Click="myDarkThemebutton_Click" Content="黑暗"/>
+				<RadioButton Name="myWindowsDefaultThemeButton" Click="myWindowsDefaultThemeButton_Click" Content="Windows 默认"/>
+			</StackPanel>
+			<TextBlock Text="主题色" FontSize="24" Margin="20,5,0,5"/>
+			<ComboBox Margin="30,5,0,0" Name="ThemeColorComboBox" SelectionChanged="ThemeColorComboBox_SelectionChanged">
+				<ComboBoxItem IsSelected="True">
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Green" Margin="0,0,10,0"/>
+						<TextBlock Text="系统默认颜色"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="SaddleBrown" Margin="0,0,10,0"/>
+						<TextBlock Text="小皮棕"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Purple" Margin="0,0,10,0"/>
+						<TextBlock Text="暮光紫"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Blue" Margin="0,0,10,0"/>
+						<TextBlock Text="云宝蓝"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="White" Margin="0,0,10,0"/>
+						<TextBlock Text="瑞瑞白"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Yellow" Margin="0,0,10,0"/>
+						<TextBlock Text="小蝶黄"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Pink" Margin="0,0,10,0"/>
+						<TextBlock Text="萍琪粉"/>
+					</StackPanel>
+				</ComboBoxItem>
+				<ComboBoxItem>
+					<StackPanel Orientation="Horizontal">
+						<Rectangle Height="20" Width="20" Fill="Orange" Margin="0,0,10,0"/>
+						<TextBlock Text="阿杰橙"/>
+					</StackPanel>
+				</ComboBoxItem>
+			</ComboBox>
+			<Rectangle Loaded="Rectangle_Loaded" Height="5" Margin="10,20,10,10" Fill="LightSlateGray"/>
+			<TextBlock Text="本地储存" FontSize="48" Margin="10,0,0,5"/>
+			<TextBlock Text="默认图片储存位置" FontSize="24" Margin="20,5,0,5"/>
+			<StackPanel Orientation="Horizontal" Margin="30,5,0,5">
+				<Button Name="ChangeAddressButton" Click="ChangeAddressButton_Click" Height="35" Width="100" Content="修改" Margin="0,0,30,0"/>
+				<TextBlock Name="SaveAddressTextBlock" Text="C:/Pictures" VerticalAlignment="Center"/>
+			</StackPanel>
+			<Rectangle Loaded="Rectangle_Loaded" Height="5" Margin="10,20,10,10" Fill="LightSlateGray"/>
+
+		</StackPanel>
+	</GridView>
+</Page>
